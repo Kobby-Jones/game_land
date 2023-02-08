@@ -1,13 +1,26 @@
+.profile-div:hover{
+    background-color: deeppink;
+}
+.search-btn:hover{
+    background-color: deeppink;
+}
+#profile:hover{
+    color: white;
+}
 .welcome-card{
-    background: url(https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529352.jpg?w=740&t=st=1675817821~exp=1675818421~hmac=9ed63a52a374fe02bdae598928a7715c9208108b76fbdb6445e53542dc3a6aca);
-    padding: 10px 5px;
+    background: url(https://img.freepik.com/free-photo/gradient-illuminated-neon-gaming-desk-setup-with-keyboard_23-2149529405.jpg?size=626&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=sph);
+    padding: 70px 5px;
     border: none;
 }
 strong{
     color: deeppink;
 }
-button{
+.browse-now{
     background-color: deeppink;
+}
+.browse-now:hover{
+    background-color: white;
+    color: deeppink;
 }
 .container{
     background-color: rgba(37, 34, 34, 0.993);
@@ -21,12 +34,27 @@ button{
 .nav-link:hover{
     color: deeppink;
 }
-.nav-link:active{
-    color: deeppink;
-}
+.nav-link:active{color: deeppink !important;}
 .col-lg-3{
     margin-bottom: 15px;
 }
 footer a{
+    color: deeppink;
+}
+li .profile:hover{
+    background-color: deeppink;
+}
+.discover-btn{
+    background-color: deeppink;
+}
+.discover-btn:hover{
+    background-color: white;;
+    color: deeppink;
+}
+.view-library-btn{
+    background-color: deeppink;
+}
+.view-library-btn:hover{
+    background-color: white;
     color: deeppink;
 }
