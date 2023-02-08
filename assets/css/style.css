@@ -37,10 +37,12 @@ strong{
 .individual-popular{
     background-color: rgba(37, 34, 34, 0.993);
 }
-.nav-link:hover{
+.nav-item > a:hover{
     color: deeppink;
 }
-.nav-link:active{color: deeppink !important;}
+.nav-item > a:active{
+    color: deeppink;
+}
 .col-lg-3{
     margin-bottom: 15px;
 }
@@ -82,4 +84,13 @@ li .profile:hover{
 .streaming-card:hover .streaming-button {
   display: inline-block;
   color: deeppink;
+}
+.top-download-card{
+    border: none;
+}
+.download-circle{
+    font-size: 1.5rem;
+}
+.download-stream{
+    background-color: rgb(80, 76, 76);
 }
