@@ -94,3 +94,16 @@ li .profile:hover{
 .download-stream{
     background-color: rgb(80, 76, 76);
 }
+.bi{
+    color: deeppink;
+}
+.get-package-btn{
+    background-color: deeppink;
+}
+.get-package-btn:hover{
+    background-color: white;
+    color: deeppink;
+}
+.view-all{
+    color: deeppink;
+}
