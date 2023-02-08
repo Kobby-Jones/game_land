@@ -1,0 +1,20 @@
+.welcome-card{
+    background: url(https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529352.jpg?w=740&t=st=1675817821~exp=1675818421~hmac=9ed63a52a374fe02bdae598928a7715c9208108b76fbdb6445e53542dc3a6aca);
+    padding: 10px 5px;
+    border: none;
+}
+strong{
+    color: deeppink;
+}
+button{
+    background-color: deeppink;
+}
+.container{
+    background-color: rgba(37, 34, 34, 0.993);
+}
+.fa-download{
+    color: deeppink;
+}
+.individual-popular{
+    background-color: rgba(37, 34, 34, 0.993);
+}

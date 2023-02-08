@@ -7,36 +7,195 @@
     <title>Game Land</title>
     <script src="https://kit.fontawesome.com/19ff38e211.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-5 py-2">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand text-uppercase" href="#">Game Land</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <form class="d-flex ms-5" role="search">
+            <i class="fa-regular fa-magnifying-glass"></i>
+        <input class="form-control me-2" type="search" placeholder="Search Game" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Browse</a>
         </li>
         <li class="nav-item">
-          <a href="#"></a>
+          <a class="nav-link" href="#">Details</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <a class="nav-link ">Stream</a>
+    </li>
+    <li class="nav-item">
+        <div class="bg-secondary rounded-pill">
+            <a href="" class="nav-link Profile">Profile <img class="rounded-pill" src="./assets/img/kobby-pic31.jpg" alt=""></a>
+        </div>
+    </li>
+    </ul>
     </div>
   </div>
 </nav>
+<div class="container card py-4 px-5 mt-5 rounded-4">
+    <div class="row">
+        <div class="card py-5 ps-5 mt-5 rounded-4 welcome-card">
+            <div class="welcome mb-2 mt-3">
+                <h5 class="text-light">welcome To Game Land</h5>
+            </div>
+            <div class="browse">
+                <h1 class="text-uppercase text-light"><strong>Browse</strong> Our</h1>
+            </div>
+            <div class="browse">
+                <h1 class="text-uppercase text-light">Popular Games Here</h1>
+            </div>
+            <div class="btn text-start">
+                <button class="btn btn-danger rounded-pill px-3">Browse Now</button>
+            </div>
+        </div>
+        <div class="card py-3 mt-5 rounded-4 most-popular-card bg-dark">
+            <div class="most-popular-head">
+                <h1 class="text-light mb-4"><em class="text-decoration-underline">Most Popular</em><strong> Right Now</strong></h1>
+            </div>
+                
+                <div class="row d-flex">
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/97/74/pig-sport-or-esport-gaming-mascot-logo-template-vector-43039774.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Black Pig</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/47/21/soldier-mascot-esport-gaming-logo-vector-26734721.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Soldier</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/90/83/skull-gaming-mascot-logo-vector-45099083.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Skull</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/70/77/grim-reaper-gaming-logo-vector-34957077.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Reapers</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/93/90/man-gun-gaming-logo-vector-24019390.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Your Team</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/06/84/lion-head-gaming-logo-vector-29340684.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Lion Games</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/98/50/spider-mascot-sport-gaming-esport-logo-template-vector-43039850.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Spider</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card individual-popular py-3 px-3 rounded-5">
+                            <img src="https://cdn.vectorstock.com/i/preview-1x/32/38/elephant-gaming-logo-vector-34353238.webp" alt="" class="card-img rounded-3">
+                            <div class="card-title d-flex mt-2">
+                                <h5 class="text-light">Elephant</h5>
+                                <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                            <div class="card-title d-flex">
+                                <h5 class="text-secondary">Sand Box</h5>
+                                <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                <h6 class="text-light ms-2">4.6</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discover-btn text-center mt-3">
+                        <button class="btn btn-danger rounded-pill px-4">Discover Popular</button>
+                    </div>
+                </div>
+                
+
+            
+        </div>
+    </div>
+</div>
     
     
 
