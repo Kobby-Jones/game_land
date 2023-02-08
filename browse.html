@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/19ff38e211.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/19ff38e211.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-5 py-2">
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="./assets/css/animate.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-5 py-2">
             <div class="container-fluid">
                 <a class="navbar-brand text-uppercase" href="#">Game Land</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +24,7 @@
                     <form class="d-flex ms-5" role="search">
                         <i class="fa-regular fa-magnifying-glass"></i>
                         <input class="form-control me-2" type="search" placeholder="Search Game" aria-label="Search" />
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn search-btn btn-outline-danger" type="submit">Search</button>
                     </form>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -36,16 +41,93 @@
                         </li>
                         <li class="nav-item">
                             <div class="rounded-pill profile-div">
-                                <a href="" class="nav-link Profile">Profile <img class="rounded-pill" src="./assets/img/kobby-pic31.jpg" alt="" /></a>
+                                <a href="" class="nav-link Profile" id="profile">Profile <img class="rounded-pill" src="./assets/img/kobby-pic31.jpg" alt="" /></a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <div class="container card py-4 px-5 mt-5 rounded-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card p-4 bg-dark rounded-4">
+                        <div class="feaured-games mb-4">
+                            <h1 class="text-light"><em class="text-decoration-underline me-2">Featured</em><strong>Games</strong></h1>
+                        </div>
+                    <div class="owl-carousel owl-theme">
+                        <div class="me-2 ms-2">
+                            <div class="card streaming-card bg-dark rounded-top-5">
+                                <img
+                                    src="https://img.freepik.com/free-vector/retro-gaming-poster-template_52683-51789.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=sph"
+                                    alt=""
+                                    class="card-img rounded-top-4"
+                                    style="height: 300px;"
+                                />
+                                <button class="btn btn-dark rounded-pill streaming-button">3k Streaming</button>
+                                <div class="card-title d-flex mt-2">
+                                    <h5 class="text-light">Arcade</h5>
+                                    <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                    <h6 class="text-light ms-2">4.6</h6>
+                                </div>
+                                <div class="card-title d-flex">
+                                    <h5 class="text-secondary">30K Downloads</h5>
+                                    <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                    <p class="text-light ms-2">4.6M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="me-2 ms-2">
+                            <div class="card streaming-card bg-dark rounded-top-5">
+                                <img
+                                    src="https://img.freepik.com/free-vector/editable-text-effect-gamer-3d-esport-stream-font-style_314614-1057.jpg?size=626&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=sph"
+                                    alt=""
+                                    class="card-img rounded-top-4"
+                                    style="height: 300px;"
+                                />
+                                <button class="btn btn-dark rounded-pill streaming-button">3k Streaming</button>
+                                <div class="card-title d-flex mt-2">
+                                    <h5 class="text-light">Esports</h5>
+                                    <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                    <h6 class="text-light ms-2">4.6</h6>
+                                </div>
+                                <div class="card-title d-flex">
+                                    <h5 class="text-secondary">30K Downloads</h5>
+                                    <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                    <p class="text-light ms-2">4.6M</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="me-2 ms-2">
+                            <div class="card streaming-card bg-dark rounded-top-5">
+                                <img
+                                    src="https://img.freepik.com/free-vector/robot-text-effect-editable-future-tech-text-style_314614-2345.jpg?size=626&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=sph"
+                                    alt=""
+                                    class="card-img rounded-top-4"
+                                    style="height: 300px;"
+                                />
+                                <button class="btn btn-dark rounded-pill streaming-button">3k Streaming</button>
+                                <div class="card-title d-flex mt-2">
+                                    <h5 class="text-light">Robots</h5>
+                                    <i class="fa-solid fa-star text-warning ms-auto"></i>
+                                    <h6 class="text-light ms-2">4.6</h6>
+                                </div>
+                                <div class="card-title d-flex">
+                                    <h5 class="text-secondary">30K Downloads</h5>
+                                    <i class="fa-sharp fa-solid ms-auto fa-download"></i>
+                                    <p class="text-light ms-2">4.6M</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/owl.carousel.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-</body>
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Press+Start+2P&family=Rubik+Mono+One&display=swap');
+
+.navbar-brand{
+    font-family: 'Press Start 2P', sans-serif;
+    color: deeppink;
+}
 .profile-div:hover{
     background-color: deeppink;
 }
@@ -57,4 +63,23 @@ li .profile:hover{
 .view-library-btn:hover{
     background-color: white;
     color: deeppink;
+}
+
+
+/* Browse */
+.streaming-card {
+  position: relative;
+  display: inline-block;
+}
+.streaming-button {
+  position: relative;
+  bottom: 40px;
+  right: 20px;
+  left: 40px;
+  display: none;
+  color: deeppink;
+}
+.streaming-card:hover .streaming-button {
+  display: inline-block;
+  color: deeppink;
 }
