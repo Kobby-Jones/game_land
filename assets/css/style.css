@@ -154,6 +154,8 @@ li .profile:hover{
     background-color: white;
     color: deeppink;
 }
+
+/* Details */
 .detail-img-card{
     background-color: rgba(37, 32, 32, 0.952);
     border: none;
@@ -167,4 +169,18 @@ li .profile:hover{
 }
 .play-card{
     position: relative;
+}
+.game-info{
+    background-color: rgba(80, 76, 76, 0.5);
+}
+.game-info-card{
+    justify-content: space-between;
+}
+.game-download-button{
+    border-color: deeppink;
+    color: deeppink;
+}
+.game-download-button:hover{
+    background-color: white;
+    color: deeppink;
 }
