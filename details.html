@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     </head>
     <body class="bg-dark py-5">
+        <!-- NAVBAR Starts -->
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark px-5 py-2 fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand text-uppercase" href="#">Game Land</a>
@@ -49,29 +50,39 @@
                 </div>
             </div>
         </nav>
+        <!-- NVBAR ends -->
+
+        <!-- Container for the entire page -->
         <div class="container py-4 mt-5 px-5 rounded-5">
+            <!-- Row for the card details -->
             <div class="row">
+                <!-- Column for the image overview -->
                 <div class="col-lg-4">
                     <div class="card detail-img-card">
                         <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="card-img rounded-5" />
                     </div>
                 </div>
+                <!-- Column for the game Video preview -->
                 <div class="col-lg-8">
                     <div class="card detail-img-card play-card">
                         <img src="https://i.ytimg.com/an_webp/W0J_GQROtZc/mqdefault_6s.webp?du=3000&sqp=CP32kp8G&rs=AOn4CLBbCYZuepQHF8E1vsPTJ4umRT194A" alt="" class="card-img rounded-5" style="height: 350px;" />
+                        <!--Play button on the preview video -->
                         <a href="https://www.youtube.com/watch?v=W0J_GQROtZc" target="_blank">
                             <button class="rounded-circle px-2 play-button"><i class="bi bi-play"></i></button>
                         </a>
                     </div>
-                </div>
+                </div>  
             </div>
+            <!-- Game Details Heading -->
             <div class="game-details text-center mt-5">
                 <h1 class="text-uppercase text-light fw-bolder">Soldier Details</h1>
             </div> 
+            <!-- Card for Game Information on download, stars, game title storage capacity and Game type -->
             <div class="card p-4 bg-dark rounded-4">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="card game-info rounded-5 px-5 py-2">
+                        <!-- Game Title and Sandbox -->
+                        <div class="card game-info rounded-5 px-5 py-2 mb-3">
                             <div class="card-title d-flex">
                                 <h4 class="text-light">Soldier</h4>
                                 <h5 class="ms-auto text-light"><i class="fa-solid fa-star text-warning"></i>4.6</h5>
@@ -82,8 +93,9 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Game details, includes downloads, storage and stars -->
                     <div class="col-lg-6">
-                        <div class="card game-info rounded-5 px-5 py-2">
+                        <div class="card game-info rounded-5 px-5 py-2 mb-3">
                             <div class="card-title game-info-card d-flex p-2">
                                 <h5><i class="fa-solid fa-star text-warning"></i></h5>
                                 <h5><i class="fa-sharp fa-solid fa-download"></i></h5>
@@ -100,26 +112,150 @@
                         </div>
                     </div>
                 </div>
+                <!-- Game details sample video contents -->
                 <div class="row mt-3">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3">
                         <img src="https://i.ytimg.com/an_webp/CMoUlqhV-iU/mqdefault_6s.webp?du=3000&sqp=CLS6k58G&rs=AOn4CLCnYsJ3p6ZAKW8D8oxGE1-tEg5ZJw" alt="" class="rounded-4">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3">
                         <img src="https://i.ytimg.com/an_webp/4R9MhSW3h6Q/mqdefault_6s.webp?du=3000&sqp=CKCRk58G&rs=AOn4CLCr5jKPUtD4Vfz4GT4pjRlSDgGIYA" alt="" class="rounded-4">
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 mb-3">
                         <img src="https://i.ytimg.com/an_webp/EihmNEQytdU/mqdefault_6s.webp?du=3000&sqp=CMKek58G&rs=AOn4CLCi91vHzWEZeL6X0O1-mudAOGSdmw" alt="" class="rounded-4">
                     </div>
                 </div>
+                <!-- Game Description -->
                 <div class="paragraph mt-4">
                     <p class="text-secondary game-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia architecto eligendi error, maxime dolorum dolores, officia quasi ad sunt fugiat optio. Vel, non ad assumenda vero in illum fuga debitis?
                     Facilis, quia. In quasi at perferendis pariatur eligendi omnis veritatis minus, reiciendis illum itaque. Exercitationem esse numquam iure delectus nam est blanditiis sit aperiam laboriosam inventore! Facere maxime earum odit.</p>
                 </div>
+                <!-- Download Game button -->
                 <div class="btn btn-dark rounded-pill game-download-button">Download Soldier Now</div>
+            </div>
+            <!-- Related Games Card -->
+            <div class="card bg-dark mt-5 p-4 rounded-4">
+                <!-- Related title -->
+                <div class="py-3 text-center">
+                    <h2 class="related-games fw-bold"><em class="text-light text-decoration-underline"> Other Related</em><strong> Games</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 1</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                        <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 2</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                         <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 3</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 4</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                        <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 5</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                         <div class="row">
+                            <div class="card related-card p-3 bg-dark">
+                                <div class="d-flex">
+                                     <img src="https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais" alt="" class="rounded-4" style="height: 75px; width:75px">
+                                     <div class="data-1 ms-2">
+                                        <h4 class="text-light">Game 6</h4>
+                                        <h5 class="text-secondary">Sandbox</h5>
+                                     </div>
+                                     <div class="star-download ms-auto">
+                                        <h5 class="text-light"><i class="fa-solid fa-star text-warning"></i>3.6</h5>
+                                        <h5 class="text-light"><i class="fa-sharp fa-solid fa-download"></i>4.1M</h5>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <hr class="text-light" width="100%">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <footer class="py-5" hidden>
+        <footer class="py-5">
             <div class="copy-right text-center">
                 <h4 class="text-light">Copyright &copy; 2023 Game Land. All Rights Reserved</h4>
                 <h4 class="text-light">Design: <a href="https://github.com/Kobby-Jones" target="_blank">Kobby Jones</a></h4>
