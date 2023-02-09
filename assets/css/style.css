@@ -152,3 +152,17 @@ li .profile:hover{
     background-color: white;
     color: deeppink;
 }
+.detail-img-card{
+    background-color: rgba(37, 32, 32, 0.952);
+    border: none;
+}
+.play-button{
+    font-size: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    display: block;
+}
+.play-card{
+    position: relative;
+}
