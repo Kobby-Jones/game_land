@@ -97,6 +97,13 @@ li .profile:hover{
 .bi{
     color: deeppink;
 }
+.bi-check-lg{
+    background-color: deeppink !important;
+    color: white;
+    font-size: 0.7rem;
+    padding: 5px 6px;
+    margin-right: auto;
+}
 .get-package-btn{
     background-color: deeppink;
 }
@@ -105,5 +112,43 @@ li .profile:hover{
     color: deeppink;
 }
 .view-all{
+    color: deeppink;
+}
+.img-card{
+    position: relative;
+}
+.overlay-btn {
+    background-color: deeppink;
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.overlay-btn2 {
+    background-color: deeppink;
+  position: absolute;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.overlay-btn3 {
+    background-color: deeppink;
+  position: absolute;
+  top: 80%;
+  right: 20%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.img-card:hover .overlay-btn{
+    display: block;
+}
+.discover-all-btn{
+    background-color: deeppink;
+}
+.discover-all-btn:hover{
+    background-color: white;
     color: deeppink;
 }
