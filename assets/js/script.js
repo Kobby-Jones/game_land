@@ -28,7 +28,6 @@ categories.forEach(category => {
         popularCategory.innerHTML = "";
         popularHeader.textContent = ` ${category.textContent} Games`;
         popularHeader.style.color = "deeppink";
-        discoverAllButton.textContent = `Discover all ${category.textContent} games`
         games.forEach(game => {
             if (game.genre === category.textContent) {
                 console.log(game.genre);
@@ -40,7 +39,9 @@ categories.forEach(category => {
    })
 
 discoverAllButton.addEventListener('click', function () {
-       
+    games.forEach(game => {
+           popularCategoryTextContent(game)
+       })
    })
 
 function popularCategoryTextContent(game) {
