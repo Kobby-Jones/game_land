@@ -21,10 +21,10 @@
 strong{
     color: deeppink;
 }
-.browse-now{
+#browse-now{
     background-color: deeppink;
 }
-.browse-now:hover{
+#browse-now:hover{
     background-color: white;
     color: deeppink;
 }
