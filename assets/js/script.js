@@ -8,6 +8,20 @@ const categories = [strategy, shooter, sports, social]
 const discoverAllButton = document.querySelector(".discover-all-btn");
 let firstEight = [];
 
+function populateDefaultGames() {
+    games.forEach(game => {
+        if (firstEight.length === 8) {
+            return;
+        }
+        firstEight.push(game)
+    })
+    console.log(firstEight)
+    firstEight.forEach(game => {
+       popularCategoryTextContent(game)
+    })
+    
+}
+populateDefaultGames();
 
 categories.forEach(category => {
     category.addEventListener('click', function () {
@@ -18,15 +32,26 @@ categories.forEach(category => {
         games.forEach(game => {
             if (game.genre === category.textContent) {
                 console.log(game.genre);
-                 popularCategory.innerHTML += `<div class="col-lg-3">
+                 popularCategoryTextContent(game)
+            }
+        })
+        
+       })
+   })
+
+discoverAllButton.addEventListener('click', function () {
+       
+   })
+
+function popularCategoryTextContent(game) {
+     popularCategory.innerHTML += `<div class="col-lg-3">
                             <div class="card img-card rounded-5">
                                 <img src="${game.thumbnail}" alt="" class="card-img">
                                  <a href="${game.game_url}" target="_blank">
                                     <button class="btn btn-danger px-3 rounded-pill overlay-btn1 overlay-btn">Play</button>
                                  </a>
                                  <a href="${game.freetogame_profile_url}" target="_blank"><button class="btn btn-danger px-3 rounded-pill overlay-btn2 overlay-btn"><i class="bi bi-eye-fill text-light"></i>1.4K</button></a>
-                                
-                                <button class="btn btn-danger pe-5 ps-2 rounded-pill overlay-btn3 overlay-btn"><i class="bi bi-controller me-5 ms-2 text-light me-5"></i></button>
+                                <a href="${game.game_url}" target="_blank"><button class="btn btn-danger pe-5 ps-2 rounded-pill overlay-btn3 overlay-btn"><i class="bi bi-controller me-5 ms-2 text-light me-5"></i></button></a>
                             </div>
                             <div class="row">
                             <div class="col-lg-2">
@@ -43,15 +68,5 @@ categories.forEach(category => {
                            </div>
                         </div>
          `;
-            }
-        })
-        
-       })
-   })
-
-discoverAllButton.addEventListener('click', function () {
-       
-   })
-
-
+}
     
