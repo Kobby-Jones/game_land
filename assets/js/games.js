@@ -1056,7 +1056,7 @@ const games = [
     title: "Blood of Steel",
     thumbnail: "https://www.freetogame.com/g/479/thumbnail.jpg",
     short_description:
-      "Blood of Steel is an online competitive strategy game featuring some of the most well-known figures throughout medieval history. Choose your general \u2013 a Crusader, Viking, Ninja or one of those from the Three Kingdoms. Build your kingdom and command armies in epic PvP battles using classic medieval warfare tactics.",
+      "Blood of Steel is an online competitive strategy game featuring some of the most well-known figures throughout medieval history.",
     game_url: "https://www.freetogame.com/open/blood-of-steel",
     genre: "Strategy",
     platform: "PC (Windows)",
