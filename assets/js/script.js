@@ -7,78 +7,72 @@ const popularHeader = document.querySelector(".popular-live-stream");
 const categories = [strategy, shooter, sports, social]
 const discoverAllButton = document.querySelector(".discover-all-btn");
 let firstEight = [];
+const featuredCarousel = document.querySelector(".carousel1");
 
+// create the carousel item card for the featured games
+function featuredGames(game) {
+  // Create the card wrapper
+  let cardWrapper = document.createElement("div");
+  cardWrapper.classList.add("me-2", "ms-2");
 
-function popularCategoryTextContent(game) {
+  // Create the card
+  let featuredCard = document.createElement("div");
+  featuredCard.classList.add("card", "streaming-card", "bg-dark", "rounded-top-5");
 
-      popularCategory.innerHTML += `<div class="col-lg-3">
-            <div class="card img-card rounded-5">
-                <img src="${game.thumbnail}" alt="" class="card-img">
-                <a href="${game.game_url}" target="_blank">
-                <button class="btn btn-danger px-3 rounded-pill overlay-btn1 overlay-btn">Play</button>
-                </a>
-                <a href="${game.freetogame_profile_url}" target="_blank"><button class="btn btn-danger px-3 rounded-pill overlay-btn2 overlay-btn"><i class="bi bi-eye-fill text-light"></i>1.4K</button></a>
-                <a href="${game.game_url}" target="_blank"><button class="btn btn-danger pe-5 ps-2 rounded-pill overlay-btn3 overlay-btn"><i class="bi bi-controller me-5 ms-2 text-light me-5"></i></button></a>
-            </div>
-            <div class="row">
-            <div class="col-lg-2">
-                <img src="${game.thumbnail}" class="rounded-circle" alt="" style="width: 36px; height:36px;">
-            </div>
-            <div class="col-lg-10">
-                <div class="text-start pe-auto">
-                        <h6><strong>${game.title}</strong></h6>
-                </div>  
-            </div>
-            <div class="status text-center">
-                <h4 class="text-light">${game.short_description}</h4>
-            </div>
-            </div>
-         </div>`;
+  // Create the card image
+  let cardImg = document.createElement("img");
+  cardImg.classList.add("card-img", "rounded-top-4");
+  cardImg.src = game.thumbnail;
+  // cardImg.style.height = "300px";
+
+// Add Image to card
+  featuredCard.appendChild(cardImg);
+
+  // Create streaming button
+  let streamingButton = document.createElement("button");
+  streamingButton.classList.add("streaming-button", "rounded-pill", "btn", "btn-dark");
+  streamingButton.innerText = "4K Streaming"
+  // Add button to card
+  featuredCard.appendChild(streamingButton);
+
+  // Create game title and stars div
+  let titleDiv = document.createElement("div");
+  titleDiv.classList.add("card-title", "d-flex", "mt-2");
+  let gameTitle = document.createElement("h5");
+  gameTitle.classList.add("text-light");
+  gameTitle.innerText = game.title;
+  titleDiv.appendChild(gameTitle);
+  let star = document.createElement("i");
+  star.classList.add("fa-solid", "fa-star", "text-warning", "ms-auto");
+  titleDiv.appendChild(star);
+  let starRating = document.createElement("h6")
+  starRating.classList.add("text-light", "ms-2");
+  starRating.innerText = "4.7";
+  titleDiv.appendChild(starRating);
+  featuredCard.appendChild(titleDiv);
+
+  // Create the download info div
+  let downloadInfoDiv = document.createElement("div");
+  downloadInfoDiv.classList.add("card-title", "d-flex");
+  let numbOfDownloads = document.createElement("h5");
+  numbOfDownloads.classList.add("text-secondary");
+  numbOfDownloads.innerText = "36K Downloads";
+  downloadInfoDiv.appendChild(numbOfDownloads);
+  let downloadIcon = document.createElement("i");
+  downloadIcon.classList.add("fa-sharp", "fa-solid", "ms-auto", "fa-download");
+  downloadInfoDiv.appendChild(downloadIcon);
+  let downloadAbbr = document.createElement("p");
+  downloadAbbr.classList.add("text-light", "ms-2");
+  downloadInfoDiv.appendChild(downloadAbbr);
+  featuredCard.appendChild(downloadInfoDiv);
+  cardWrapper.appendChild(featuredCard);
+  featuredCarousel.appendChild(cardWrapper)
 }
+games.forEach(game => {
+  featuredGames(game)
+})
 
-function populateDefaultGames() {
-    games.forEach((game) => {
-      if (firstEight.length === 8) {
-        return;
-      }
-      firstEight.push(game);
-    });
-    console.log(firstEight);
-    firstEight.forEach((game) => {
-      createGameCard(game);
-    });
- 
-  }
-    
-populateDefaultGames();
-
-categories.forEach((category) => {
-  category.addEventListener("click", function () {
-    popularCategory.innerHTML = "";
-    popularHeader.textContent = ` ${category.textContent} Games`;
-    popularHeader.style.color = "deeppink";
-    games.forEach((game) => {
-      if (game.genre === category.textContent) {
-          console.log(game.genre);
-        createGameCard(game)
-      }
-    });
-  });
-});
-discoverAllButton.addEventListener("click", function () {
-  popularCategory.innerHTML = "";
-  games.forEach((game) => {
-    createGameCard(game)
-  });
-});
-
-
-
-
-
-
-
-
+// Create a card for the game element 
 function createGameCard(game) {
   // create the root div with class "col-lg-3"
   let rootDiv = document.createElement("div");
@@ -93,8 +87,6 @@ function createGameCard(game) {
   img.src = game.thumbnail;
   img.alt = "";
   img.classList.add("card-img");
-
-
   
   // create the first button and anchor element
   let firstBtn = document.createElement("button");
@@ -184,5 +176,39 @@ function createGameCard(game) {
   rootDiv.appendChild(innerDiv);
   rootDiv.appendChild(descriptionRow);
   popularCategory.appendChild(rootDiv);
-
 }
+
+// Default games to load on the popular games section
+function populateDefaultGames() {
+    games.forEach((game) => {
+      if (firstEight.length === 8) {
+        return;
+      }
+      firstEight.push(game);
+    });
+    console.log(firstEight);
+    firstEight.forEach((game) => {
+      createGameCard(game);
+    });}
+populateDefaultGames();
+// Update content based on the category selected
+categories.forEach((category) => {
+  category.addEventListener("click", function () {
+    popularCategory.innerHTML = "";
+    popularHeader.textContent = ` ${category.textContent} Games`;
+    popularHeader.style.color = "deeppink";
+    games.forEach((game) => {
+      if (game.genre === category.textContent) {
+        createGameCard(game)
+      }
+    });
+  });
+});
+// Load all games when the discover all button is clicked
+discoverAllButton.addEventListener("click", function () {
+  popularCategory.innerHTML = "";
+  games.forEach((game) => {
+    createGameCard(game)
+  });
+});
+

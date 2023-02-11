@@ -8,17 +8,17 @@ $(".carousel1").owlCarousel({
     responsive: {
         0: {
             items: 1,
-            dots: true,
+            dots: false,
             nav: true
         },
         485: {
             items: 1,
-            dots: true,
+            dots: false,
             nav: true
         },
         728: {
             items: 2,
-            dots: true,
+            dots: false,
             nav: true,
         }
   }
@@ -33,17 +33,17 @@ $(".carousel2").owlCarousel({
   responsive: {
     0: {
       items: 1,
-      dots: true,
+      dots:true,
       nav: true,
     },
     485: {
       items: 1,
-      dots: true,
+      dots:true,
       nav: true,
     },
     728: {
       items: 3,
-      dots: true,
+      dots:true,
       nav: true,
     },
   },
