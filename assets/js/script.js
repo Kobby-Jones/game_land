@@ -45,16 +45,16 @@ function populateDefaultGames() {
     });
     console.log(firstEight);
     firstEight.forEach((game) => {
-      popularCategoryTextContent(game)
+      createGameCard(game);
     });
  
   }
     
-// populateDefaultGames();
+populateDefaultGames();
 
 categories.forEach((category) => {
   category.addEventListener("click", function () {
-    popularCategory.innerHTML = ""
+    popularCategory.innerHTML = "";
     popularHeader.textContent = ` ${category.textContent} Games`;
     popularHeader.style.color = "deeppink";
     games.forEach((game) => {
@@ -66,6 +66,7 @@ categories.forEach((category) => {
   });
 });
 discoverAllButton.addEventListener("click", function () {
+  popularCategory.innerHTML = "";
   games.forEach((game) => {
     createGameCard(game)
   });
@@ -134,12 +135,54 @@ function createGameCard(game) {
   innerDiv.appendChild(thirdAnchor);
 
   // Create row for the down content
-  let decsrRow = document.createElement("div")
-  decsrRow.classList.add("row")
+  let descriptionRow = document.createElement("div");
+  descriptionRow.classList.add("row");
+
   // Create profile image column
-  let profileColumn = document.createElement("div")
-  profileColumn.classList.add("col-lg-2")
-  rootDiv.appendChild(innerDiv)
-  popularCategory.appendChild(rootDiv)
+  let profileColumn = document.createElement("div");
+  profileColumn.classList.add("col-lg-2");
+
+  // Create profile image
+  let profileImg = document.createElement("img");
+  profileImg.src = game.thumbnail;
+  profileImg.alt = "";
+  profileImg.classList.add("rounded-circle");
+  profileImg.style.width = "36px";
+  profileImg.style.height = "36px";
+  profileColumn.appendChild(profileImg);
+   descriptionRow.appendChild(profileColumn);
+
+  // Create the title column
+  let titleColumn = document.createElement("div");
+  titleColumn.classList.add("col-lg-10");
+
+  // Create the title wrapper
+  let titleDiv = document.createElement("div");
+  titleDiv.classList.add("text-start", "pe-auto");
+
+  // Create the h6 element for the title
+  let titleText = document.createElement("h6");
+  // Create a strong element for the title
+  let strong = document.createElement("strong");
+  strong.innerText = game.title;
+  titleText.appendChild(strong);
+  titleDiv.appendChild(titleText);
+  titleColumn.appendChild(titleDiv);
+  descriptionRow.appendChild(titleColumn);
+
+  // Crete the short description div
+  let shortDescriptionDiv = document.createElement("div");
+  shortDescriptionDiv.classList.add("text-center");
+
+  // Create the description text
+  let descriptionText = document.createElement("h4");
+  descriptionText.classList.add("text-light");
+  descriptionText.innerText = game.short_description;
+  
+  shortDescriptionDiv.appendChild(descriptionText);
+  descriptionRow.appendChild(shortDescriptionDiv);
+  rootDiv.appendChild(innerDiv);
+  rootDiv.appendChild(descriptionRow);
+  popularCategory.appendChild(rootDiv);
 
 }
