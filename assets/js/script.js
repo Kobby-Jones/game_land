@@ -10,8 +10,16 @@ let defaultGames = [];
 const trendingGame = document.querySelector(".trending-today");
 const featuredCarousel = document.querySelector(".carousel1");
 const topDownloadGames = document.querySelector(".top-download-games");
+const getPackageBtn = document.querySelector(".get-package-btn");
+const myModal = document.getElementById("myModal");
+const close = document.querySelector(".close");
 
-
+getPackageBtn.addEventListener('click', function () {
+  myModal.style.display = "block";
+});
+close.addEventListener('click', function () {
+  myModal.style.display = "none";
+})
 // create the carousel item card for the featured games
 function gameCardToRender(game, container) {
   // Create the card wrapper
@@ -224,10 +232,10 @@ discoverAllButton.addEventListener("click", function () {
 function topDownloadFunction() {
   let html = "";
   const viewAllButton = ` <div class="text-center mt-auto pt-4">
-          <a href="" class="view-all fw-bold mt-3 text-decoration-none">View All Games</a>
+          <a href="#popular-category" class="view-all fw-bold mt-3 text-decoration-none scroll-to-section">View All Games</a>
       </div>`;
   
-  const topGames = games.slice(0, 4)
+  const topGames = games.slice(4, 8)
   for (const game of topGames) {
      html += ` <div class="row">
         <div class="col-lg-6">
@@ -248,7 +256,7 @@ function topDownloadFunction() {
                 <i class="fa-sharp fa-solid me-1 mt-2 fa-download"></i>
                 <p class="text-light me-auto mt-1">4.6M</p>
                 <div class="download-stream rounded-circle p-2 mb-5 text-center">
-                    <a href="" class="text-decoration-none">
+                    <a href="${game.game_url}" class="text-decoration-none" target="_blank">
                           <i class="fa-sharp fa-solid download-circle  me-1 fa-download" title="Download Game"></i>
                     </a>
                 </div>
