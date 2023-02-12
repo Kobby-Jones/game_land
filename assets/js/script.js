@@ -7,10 +7,12 @@ const popularHeader = document.querySelector(".popular-live-stream");
 const categories = [strategy, shooter, sports, social]
 const discoverAllButton = document.querySelector(".discover-all-btn");
 let firstEight = [];
+const trendingGame = document.querySelector(".trending-today");
 const featuredCarousel = document.querySelector(".carousel1");
 
+
 // create the carousel item card for the featured games
-function featuredGames(game) {
+function featuredGames(game, container) {
   // Create the card wrapper
   let cardWrapper = document.createElement("div");
   cardWrapper.classList.add("me-2", "ms-2");
@@ -23,7 +25,6 @@ function featuredGames(game) {
   let cardImg = document.createElement("img");
   cardImg.classList.add("card-img", "rounded-top-4");
   cardImg.src = game.thumbnail;
-  // cardImg.style.height = "300px";
 
 // Add Image to card
   featuredCard.appendChild(cardImg);
@@ -66,11 +67,16 @@ function featuredGames(game) {
   downloadInfoDiv.appendChild(downloadAbbr);
   featuredCard.appendChild(downloadInfoDiv);
   cardWrapper.appendChild(featuredCard);
-  featuredCarousel.appendChild(cardWrapper)
+  container.appendChild(cardWrapper)
 }
+
 games.forEach(game => {
-  featuredGames(game)
+  featuredGames(game, featuredCarousel);
 })
+
+let trendingToday = games[Math.floor(Math.random() * games.length)];
+featuredGames(trendingToday, trendingGame);
+
 
 // Create a card for the game element 
 function createGameCard(game) {
