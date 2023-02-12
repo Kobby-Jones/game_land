@@ -13,6 +13,14 @@ const topDownloadGames = document.querySelector(".top-download-games");
 const getPackageBtn = document.querySelector(".get-package-btn");
 const myModal = document.getElementById("myModal");
 const close = document.querySelector(".close");
+const detailImag1 = document.querySelector(".details-img-1");
+const detailImag2 = document.querySelector(".details-img-2");
+const topdownload = document.querySelector(".topdownload");
+
+// detailImag1.src =
+//   "https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais";
+//   detailImag2.src =
+//     "https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais";
 
 getPackageBtn.addEventListener('click', function () {
   myModal.style.display = "block";
@@ -35,13 +43,13 @@ function gameCardToRender(game, container) {
   cardImg.classList.add("card-img", "rounded-top-4");
   cardImg.src = game.thumbnail;
 
-// Add Image to card
+  // Add Image to card
   featuredCard.appendChild(cardImg);
 
   // Create streaming button
   let playNowButton = document.createElement("button");
   playNowButton.classList.add("streaming-button", "rounded-pill", "btn", "btn-dark");
-  playNowButton.innerText = "Play Now"
+  playNowButton.innerText = "Play Now";
   // Add button to card
   featuredCard.appendChild(playNowButton);
 
@@ -76,7 +84,10 @@ function gameCardToRender(game, container) {
   downloadInfoDiv.appendChild(downloadAbbr);
   featuredCard.appendChild(downloadInfoDiv);
   cardWrapper.appendChild(featuredCard);
-  container.appendChild(cardWrapper)
+  container.appendChild(cardWrapper);
+  playNowButton.addEventListener("click", function () {
+    document.location.href = game.game_url;
+  });
 }
 
 // Populate featuredCarousel with all the games
@@ -117,14 +128,14 @@ function createGameCard(game, divContainer) {
   // create the second button and anchor element
   let secondBtn = document.createElement("button");
   secondBtn.classList.add("btn", "btn-danger", "px-3", "rounded-pill", "overlay-btn2", "overlay-btn");
-  let secondAnchor = document.createElement("a");
-  secondAnchor.href = game.freetogame_profile_url;
-  secondAnchor.target = "_blank";
+  let eyeButton = document.createElement("a");
+  eyeButton.href = "/details.html";
+  eyeButton.target = "_blank";
   let secondBtnText = document.createElement("i");
   secondBtnText.classList.add("bi", "bi-eye-fill", "text-light");
   secondBtnText.textContent += "4.5K"
   secondBtn.appendChild(secondBtnText);
-  secondAnchor.appendChild(secondBtn);
+  eyeButton.appendChild(secondBtn);
   
   // create the third button and anchor element
   let thirdBtn = document.createElement("button");
@@ -140,7 +151,7 @@ function createGameCard(game, divContainer) {
   // add all the elements to the inner div
   innerDiv.appendChild(img);
   innerDiv.appendChild(firstAnchor);
-  innerDiv.appendChild(secondAnchor);
+  innerDiv.appendChild(eyeButton);
   innerDiv.appendChild(thirdAnchor);
 
   // Create row for the down content
@@ -237,7 +248,7 @@ function topDownloadFunction() {
   
   const topGames = games.slice(4, 8)
   for (const game of topGames) {
-     html += ` <div class="row">
+     html = ` <div class="row">
         <div class="col-lg-6">
             <div class="card top-download-card bg-dark">
                 <img src="${game.thumbnail}" alt="" class="card-img rounded-5 ">
@@ -267,12 +278,11 @@ function topDownloadFunction() {
      <div class="line">
           <hr width="100%" class="text-light">
       </div>`;
-    topDownloadGames.innerHTML = html;
-    topDownloadGames.innerHTML += viewAllButton;
-    
+    topDownloadGames.innerHTML += html;
+   
     
   }
-    
+    topDownloadGames.innerHTML += viewAllButton;
   
 }
 
