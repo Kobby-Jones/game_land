@@ -96,8 +96,10 @@ games.forEach(game => {
 })
 
 // Let the trending today generate the game randomly
-let trendingToday = games[Math.floor(Math.random() * games.length)];
-gameCardToRender(trendingToday, trendingGame);
+let trendingToday1 = games[Math.floor(Math.random() * games.length)];
+let trendingToday2 = games[Math.floor(Math.random() * games.length)];
+gameCardToRender(trendingToday1, trendingGame);
+gameCardToRender(trendingToday2, trendingGame);
 
 
 // Create a card for the game element 
