@@ -6,9 +6,10 @@ const social = document.getElementById("social");
 const popularHeader = document.querySelector(".popular-live-stream");
 const categories = [strategy, shooter, sports, social]
 const discoverAllButton = document.querySelector(".discover-all-btn");
-let firstEight = [];
+let defaultGames = [];
 const trendingGame = document.querySelector(".trending-today");
 const featuredCarousel = document.querySelector(".carousel1");
+const topDownloadGames = document.querySelector(".top-download-games");
 
 
 // create the carousel item card for the featured games
@@ -30,11 +31,11 @@ function featuredGames(game, container) {
   featuredCard.appendChild(cardImg);
 
   // Create streaming button
-  let streamingButton = document.createElement("button");
-  streamingButton.classList.add("streaming-button", "rounded-pill", "btn", "btn-dark");
-  streamingButton.innerText = "4K Streaming"
+  let playNowButton = document.createElement("button");
+  playNowButton.classList.add("streaming-button", "rounded-pill", "btn", "btn-dark");
+  playNowButton.innerText = "Play Now"
   // Add button to card
-  featuredCard.appendChild(streamingButton);
+  featuredCard.appendChild(playNowButton);
 
   // Create game title and stars div
   let titleDiv = document.createElement("div");
@@ -79,7 +80,7 @@ featuredGames(trendingToday, trendingGame);
 
 
 // Create a card for the game element 
-function createGameCard(game) {
+function createGameCard(game, divContainer) {
   // create the root div with class "col-lg-3"
   let rootDiv = document.createElement("div");
   rootDiv.classList.add("col-lg-3");
@@ -181,22 +182,22 @@ function createGameCard(game) {
   descriptionRow.appendChild(shortDescriptionDiv);
   rootDiv.appendChild(innerDiv);
   rootDiv.appendChild(descriptionRow);
-  popularCategory.appendChild(rootDiv);
+  divContainer.appendChild(rootDiv);
 }
 
 // Default games to load on the popular games section
-function populateDefaultGames() {
+function populateDefaultGames(numberOfGames) {
     games.forEach((game) => {
-      if (firstEight.length === 8) {
+      if (defaultGames.length === numberOfGames) {
         return;
       }
-      firstEight.push(game);
+      defaultGames.push(game);
     });
-    console.log(firstEight);
-    firstEight.forEach((game) => {
-      createGameCard(game);
+    console.log(defaultGames);
+    defaultGames.forEach((game) => {
+      createGameCard(game, popularCategory);
     });}
-populateDefaultGames();
+populateDefaultGames(12);
 // Update content based on the category selected
 categories.forEach((category) => {
   category.addEventListener("click", function () {
@@ -205,7 +206,7 @@ categories.forEach((category) => {
     popularHeader.style.color = "deeppink";
     games.forEach((game) => {
       if (game.genre === category.textContent) {
-        createGameCard(game)
+        createGameCard(game, popularCategory)
       }
     });
   });
@@ -214,7 +215,36 @@ categories.forEach((category) => {
 discoverAllButton.addEventListener("click", function () {
   popularCategory.innerHTML = "";
   games.forEach((game) => {
-    createGameCard(game)
+    createGameCard(game, popularCategory)
   });
 });
 
+const topDownload = `
+  <div class="row">
+        <div class="col-lg-6">
+            <div class="card top-download-card bg-dark">
+                <img src="https://cdn.vectorstock.com/i/preview-1x/70/77/grim-reaper-gaming-logo-vector-34957077.webp" alt="" class="card-img rounded-5 ">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="top-downloaded-title text-center">
+                <h5 class="text-light mt-5">Reapers</h5>
+            </div>
+            <div class="top-downloaded-title text-center">
+                <h5 class="text-secondary">Sandbox</h5>
+            </div>
+            <div class="top-downloaded-title d-flex text-start">
+                <i class="fa-solid fa-star text-warning me-1 mt-2"></i>
+                <h6 class="text-light me-auto mt-2">3.9</h6>
+                <i class="fa-sharp fa-solid me-1 mt-2 fa-download"></i>
+                <p class="text-light me-auto mt-1">4.6M</p>
+                <div class="download-stream rounded-circle p-2 mb-5 text-center">
+                    <a href="" class="text-decoration-none">
+                          <i class="fa-sharp fa-solid download-circle  me-1 fa-download" title="Download Game"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+`;
