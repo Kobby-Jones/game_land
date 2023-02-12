@@ -222,10 +222,14 @@ discoverAllButton.addEventListener("click", function () {
   });
 });
 function topDownloadFunction() {
+  let html = "";
+  const viewAllButton = ` <div class="text-center mt-auto pt-4">
+          <a href="" class="view-all fw-bold mt-3 text-decoration-none">View All Games</a>
+      </div>`;
+  
   const topGames = games.slice(0, 4)
   for (const game of topGames) {
-    topDownloadGames.innerHTML += `
-  <div class="row">
+     html += ` <div class="row">
         <div class="col-lg-6">
             <div class="card top-download-card bg-dark">
                 <img src="${game.thumbnail}" alt="" class="card-img rounded-5 ">
@@ -254,11 +258,11 @@ function topDownloadFunction() {
     </div>
      <div class="line">
           <hr width="100%" class="text-light">
-      </div>
-      <div class="text-center mt-auto pt-4">
-          <a href="" class="view-all fw-bold mt-3 text-decoration-none">View All Games</a>
-      </div>
-`;
+      </div>`;
+    topDownloadGames.innerHTML = html;
+    topDownloadGames.innerHTML += viewAllButton;
+    
+    
   }
     
   
