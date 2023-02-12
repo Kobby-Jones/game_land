@@ -13,7 +13,7 @@ const topDownloadGames = document.querySelector(".top-download-games");
 
 
 // create the carousel item card for the featured games
-function featuredGames(game, container) {
+function gameCardToRender(game, container) {
   // Create the card wrapper
   let cardWrapper = document.createElement("div");
   cardWrapper.classList.add("me-2", "ms-2");
@@ -71,12 +71,14 @@ function featuredGames(game, container) {
   container.appendChild(cardWrapper)
 }
 
+// Populate featuredCarousel with all the games
 games.forEach(game => {
-  featuredGames(game, featuredCarousel);
+  gameCardToRender(game, featuredCarousel);
 })
 
+// Let the trending today generate the game randomly
 let trendingToday = games[Math.floor(Math.random() * games.length)];
-featuredGames(trendingToday, trendingGame);
+gameCardToRender(trendingToday, trendingGame);
 
 
 // Create a card for the game element 
@@ -196,6 +198,7 @@ function populateDefaultGames(numberOfGames) {
     console.log(defaultGames);
     defaultGames.forEach((game) => {
       createGameCard(game, popularCategory);
+      
     });}
 populateDefaultGames(12);
 // Update content based on the category selected
@@ -218,20 +221,22 @@ discoverAllButton.addEventListener("click", function () {
     createGameCard(game, popularCategory)
   });
 });
-
-const topDownload = `
+function topDownloadFunction() {
+  const topGames = games.slice(0, 4)
+  for (const game of topGames) {
+    topDownloadGames.innerHTML += `
   <div class="row">
         <div class="col-lg-6">
             <div class="card top-download-card bg-dark">
-                <img src="https://cdn.vectorstock.com/i/preview-1x/70/77/grim-reaper-gaming-logo-vector-34957077.webp" alt="" class="card-img rounded-5 ">
+                <img src="${game.thumbnail}" alt="" class="card-img rounded-5 ">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="top-downloaded-title text-center">
-                <h5 class="text-light mt-5">Reapers</h5>
+                <h5 class="text-light mt-5">${game.title}</h5>
             </div>
             <div class="top-downloaded-title text-center">
-                <h5 class="text-secondary">Sandbox</h5>
+                <h5 class="text-secondary">${game.developer}</h5>
             </div>
             <div class="top-downloaded-title d-flex text-start">
                 <i class="fa-solid fa-star text-warning me-1 mt-2"></i>
@@ -247,4 +252,17 @@ const topDownload = `
             </div>
         </div>
     </div>
+     <div class="line">
+          <hr width="100%" class="text-light">
+      </div>
+      <div class="text-center mt-auto pt-4">
+          <a href="" class="view-all fw-bold mt-3 text-decoration-none">View All Games</a>
+      </div>
 `;
+  }
+    
+  
+}
+
+
+topDownloadFunction();

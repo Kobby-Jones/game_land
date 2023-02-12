@@ -75,9 +75,10 @@ li .profile:hover{
 }
 .streaming-button {
   position: relative;
-  bottom: 40px;
-  right: 20px;
-  left: 40px;
+  bottom: 80px;
+  right: 50%;
+  left: 50%;
+  
   display: none;
   color: deeppink;
 }
