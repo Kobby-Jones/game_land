@@ -17,10 +17,6 @@ const detailImag1 = document.querySelector(".details-img-1");
 const detailImag2 = document.querySelector(".details-img-2");
 const topdownload = document.querySelector(".topdownload");
 
-// detailImag1.src =
-//   "https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais";
-//   detailImag2.src =
-//     "https://img.freepik.com/premium-vector/soldier-mascot-logo-esport_142989-291.jpg?size=338&ext=jpg&uid=R92225937&ga=GA1.1.307101144.1675816291&semt=ais";
 
 getPackageBtn.addEventListener('click', function () {
   myModal.style.display = "block";
@@ -138,6 +134,7 @@ function createGameCard(game, divContainer) {
   secondBtnText.textContent += "4.5K"
   secondBtn.appendChild(secondBtnText);
   eyeButton.appendChild(secondBtn);
+  
   
   // create the third button and anchor element
   let thirdBtn = document.createElement("button");
@@ -290,3 +287,4 @@ function topDownloadFunction() {
 
 
 topDownloadFunction();
+console.log(games.length)
