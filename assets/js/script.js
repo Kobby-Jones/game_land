@@ -8,6 +8,7 @@ const categories = [strategy, shooter, sports, social]
 const discoverAllButton = document.querySelector(".discover-all-btn");
 let defaultGames = [];
 const trendingGame = document.querySelector(".trending-today");
+const trendingGame2 = document.querySelector(".trending-today2");
 const featuredCarousel = document.querySelector(".carousel1");
 const topDownloadGames = document.querySelector(".top-download-games");
 const getPackageBtn = document.querySelector(".get-package-btn");
@@ -16,6 +17,9 @@ const close = document.querySelector(".close");
 const detailImag1 = document.querySelector(".details-img-1");
 const detailImag2 = document.querySelector(".details-img-2");
 const topdownload = document.querySelector(".topdownload");
+
+const imgOverview = document.getElementById("img_overview");
+
 
 
 getPackageBtn.addEventListener('click', function () {
@@ -95,8 +99,7 @@ games.forEach(game => {
 let trendingToday1 = games[Math.floor(Math.random() * games.length)];
 let trendingToday2 = games[Math.floor(Math.random() * games.length)];
 gameCardToRender(trendingToday1, trendingGame);
-gameCardToRender(trendingToday2, trendingGame);
-
+gameCardToRender(trendingToday2, trendingGame2);
 
 // Create a card for the game element 
 function createGameCard(game, divContainer) {
@@ -113,6 +116,7 @@ function createGameCard(game, divContainer) {
   img.src = game.thumbnail;
   img.alt = "";
   img.classList.add("card-img");
+  window.imgSrc = img.src
   
   // create the first button and anchor element
   let firstBtn = document.createElement("button");
