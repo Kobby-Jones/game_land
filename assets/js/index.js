@@ -1,6 +1,41 @@
 //************ * HOME PAGE *********
 const homeMostPopularRow = document.querySelector(".home-most-popular-row");
 let selectedGames = [];
+const libraryImage1 = document.querySelector(".library-img-1");
+const libraryImage2 = document.querySelector(".library-img-2");
+const libraryImage3 = document.querySelector(".library-img-3");
+const libraryTitle1 = document.getElementById("library-title-1");
+const libraryTitle2 = document.getElementById("library-title-2");
+const libraryTitle3 = document.getElementById("library-title-3");
+const libraryDeveloper1 = document.getElementById("library-developer-1");
+const libraryDeveloper2 = document.getElementById("library-developer-2");
+const libraryDeveloper3 = document.getElementById("library-developer-3");
+const libraryDate1 = document.getElementById("library-date-1");
+const libraryDate2 = document.getElementById("library-date-2");
+const libraryDate3 = document.getElementById("library-date-3");
+const viewYourLibraryButton = document.querySelector(".view-library-btn");
+
+let gameLibrary1 = games[Math.floor(Math.random() * games.length)]
+let gameLibrary2 = games[Math.floor(Math.random() * games.length)]
+let gameLibrary3 = games[Math.floor(Math.random() * games.length)]
+
+libraryImage1.src = gameLibrary1.thumbnail;
+libraryTitle1.innerText = gameLibrary1.title;
+libraryDeveloper1.innerText = gameLibrary1.developer;
+libraryDate1.innerText = gameLibrary1.release_date;
+libraryImage2.src = gameLibrary2.thumbnail;
+libraryTitle2.innerText = gameLibrary2.title;
+libraryDeveloper2.innerText = gameLibrary2.developer;
+libraryDate2.innerText = gameLibrary2.release_date;
+libraryImage3.src = gameLibrary3.thumbnail;
+libraryTitle3.innerText = gameLibrary3.title;
+libraryDeveloper3.innerText = gameLibrary3.developer;
+libraryDate3.innerText = gameLibrary3.release_date;
+
+viewYourLibraryButton.addEventListener('click', function () {
+    window.location.href = '/browse.html';
+});
+
 
 // crete function for the most popular cards at hte home page
 function mostPopularCard(game) {
