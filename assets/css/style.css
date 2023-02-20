@@ -40,6 +40,9 @@ strong{
 .nav-item > a:hover{
     color: deeppink;
 }
+.home{
+    color: deeppink;
+}
 .nav-item > a:active{
     color: deeppink;
 }
