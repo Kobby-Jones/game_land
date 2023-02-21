@@ -22,6 +22,12 @@ const imgOverview = document.getElementById("img_overview");
 
 
 
+function setDetailsImageSrc(src) {
+  localStorage.setItem("details-image-src", src);
+  window.location.href = "/details.html";
+}
+
+
 
 // getPackageBtn.addEventListener('click', function () {
 //   myModal.style.display = "block";
@@ -132,8 +138,7 @@ function createGameCard(game, divContainer) {
   let secondBtn = document.createElement("button");
   secondBtn.classList.add("btn", "btn-danger", "px-3", "rounded-pill", "overlay-btn2", "overlay-btn");
   let eyeButton = document.createElement("a");
-  eyeButton.href = "/details.html";
-  eyeButton.target = "_blank";
+  eyeButton.href = "/details.html?src=" + img.src;
   let secondBtnText = document.createElement("i");
   secondBtnText.classList.add("bi", "bi-eye-fill", "text-light");
   secondBtnText.textContent += "4.5K"
