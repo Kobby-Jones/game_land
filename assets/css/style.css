@@ -76,6 +76,21 @@ li .profile:hover{
   position: relative;
   display: inline-block;
 }
+.owl-next{
+    position: absolute;
+    bottom: 40%;
+    left: 98%;
+}
+.owl-prev{
+    position: absolute;
+    bottom: 40%;
+    right: 98%;
+}
+.owl-prev span, .owl-next span{
+    font-size: 5rem;
+    color: white;
+    
+}
 .streaming-button {
   position: relative;
   bottom: 80px;
