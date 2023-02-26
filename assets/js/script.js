@@ -17,8 +17,9 @@ const close = document.querySelector(".close");
 const detailImag1 = document.querySelector(".details-img-1");
 const detailImag2 = document.querySelector(".details-img-2");
 const topdownload = document.querySelector(".topdownload");
-
 const imgOverview = document.getElementById("img_overview");
+const statusCard = document.querySelector(".status");
+const exitPaxkageCardbtn = document.querySelector('.btn-warning');
 
 
 
@@ -29,13 +30,13 @@ function setDetailsImageSrc(src) {
 
 
 
-// getPackageBtn.addEventListener('click', function () {
-//   myModal.style.display = "block";
-// });
-// close.addEventListener('click', function () {
-//   myModal.style.display = "none";
-// })
-// create the carousel item card for the featured games
+getPackageBtn.addEventListener('click', function () {
+  statusCard.style.display = "block";
+});
+exitPaxkageCardbtn.addEventListener('click', function () {
+  statusCard.style.display = "none";
+});
+
 function gameCardToRender(game, container) {
   // Create the card wrapper
   let cardWrapper = document.createElement("div");
