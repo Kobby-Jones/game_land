@@ -80,17 +80,25 @@ li .profile:hover{
     position: absolute;
     bottom: 40%;
     left: 98%;
+    
 }
 .owl-prev{
     position: absolute;
     bottom: 40%;
     right: 98%;
+   
+    
 }
 .owl-prev span, .owl-next span{
     font-size: 5rem;
-    color: white;
-    
+    color: #fff;
+    background-color: transparent;
 }
+.owl-prev span, .owl-next span :hover{
+    background-color: transparent;
+    border: none;
+}
+
 .streaming-button {
   position: relative;
   bottom: 80px;
@@ -203,42 +211,3 @@ li .profile:hover{
     background-color: white;
     color: deeppink;
 }
-
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
