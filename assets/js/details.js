@@ -6,6 +6,8 @@ const platform = document.querySelector(".platform");
 const title = document.querySelector(".details-title")
 const publisher = document.querySelector(".publisher");
 const gameDescription = document.querySelector(".game-description");
+const downloadGamebtn = document.querySelector(".game-download-button");
+const playButton = document.getElementById("play-button");
 
 
 window.onload = function () {
@@ -17,6 +19,7 @@ window.onload = function () {
     var publisherParam = params.get("publisher");
     var titleParam = params.get("title");
     var descriptionParam = params.get("description");
+    var gamesite = params.get("gamesite");
     img.src = srcParam;
     img2.src = srcParam;
     title.textContent = titleParam + " Details";
@@ -25,5 +28,11 @@ window.onload = function () {
     developer.textContent += " " + developerParam;
     publisher.textContent += " " + publisherParam;
     gameDescription.textContent = descriptionParam;
-
+    downloadGamebtn.textContent = "Download" + " " + titleParam + " " + "Now";
+    downloadGamebtn.addEventListener('click', function () {
+        window.location.href = gamesite;
+    })
+    playButton.addEventListener('click', function () {
+        window.location.href = gamesite
+    })
 };

@@ -134,7 +134,7 @@ function createGameCard(game, divContainer) {
   let secondBtn = document.createElement("button");
   secondBtn.classList.add("btn", "btn-danger", "px-3", "rounded-pill", "overlay-btn2", "overlay-btn");
   let eyeButton = document.createElement("a");
-  eyeButton.href = `/details.html?src=${img.src}&developer=${game.developer}&title=${game.title}&genre=${game.genre}&platform=${game.platform}&publisher=${game.publisher}&description=${game.short_description}`;
+  eyeButton.href = `/details.html?src=${img.src}&developer=${game.developer}&title=${game.title}&genre=${game.genre}&platform=${game.platform}&publisher=${game.publisher}&description=${game.short_description}&gamesite=${game.game_url}`;
   let secondBtnText = document.createElement("i");
   secondBtnText.classList.add("bi", "bi-eye-fill", "text-light");
   secondBtnText.textContent += "4.5K"
