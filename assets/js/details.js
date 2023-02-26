@@ -1,18 +1,29 @@
+const img = document.getElementById("details-img");
+const img2 = document.getElementById("details-img2");
+const developer = document.querySelector(".developer");
+const genre = document.querySelector(".genre");
+const platform = document.querySelector(".platform");
+const title = document.querySelector(".details-title")
+const publisher = document.querySelector(".publisher");
+const gameDescription = document.querySelector(".game-description");
 
 
-// function showDetails(src) {
-//     detalsImage.src = src;
-// }
 window.onload = function () {
-    var img = document.getElementById("details-img");
-     var img2 = document.getElementById("details-img2");
   var params = new URLSearchParams(window.location.search);
-  var src = params.get("src");
-  if (src) {
-      img.src = src;
-      img2.src = src
-  } else {
-      img.src = "https://www.freetogame.com/g/540/thumbnail.jpg";
-  }
-};
+    var srcParam = params.get("src");
+    var genreParam = params.get("genre");
+    var platformParam = params.get("platform");
+    var developerParam = params.get("developer");
+    var publisherParam = params.get("publisher");
+    var titleParam = params.get("title");
+    var descriptionParam = params.get("description");
+    img.src = srcParam;
+    img2.src = srcParam;
+    title.textContent = titleParam + " Details";
+    genre.textContent += " " + genreParam;
+    platform.textContent += " " + platformParam;
+    developer.textContent += " " + developerParam;
+    publisher.textContent += " " + publisherParam;
+    gameDescription.textContent = descriptionParam;
 
+};
