@@ -228,4 +228,5 @@ function choosePopular() {
   });
 }
 choosePopular();
+// Make the libraryGames function globally available
 window.libraryGames = libraryGames;

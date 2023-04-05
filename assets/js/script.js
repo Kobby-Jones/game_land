@@ -20,9 +20,26 @@ const topdownload = document.querySelector(".topdownload");
 const imgOverview = document.getElementById("img_overview");
 const statusCard = document.querySelector(".status");
 const exitPaxkageCardbtn = document.querySelector('.btn-warning');
+const searchInput = document.querySelector(".search-input");
 
 
+function filterCards(searchTerm) {
+  const gameCards = document.querySelectorAll(".game-card");
+  gameCards.forEach(card => {
+    console.log(card)
+    const title = card.querySelector(".title").textContent;
+    if (title.toLowerCase().includes(searchTerm.toLowerCase())) {
+      card.style.display = 'block';
+    }
+    else {
+      card.style.display = 'none'
+    }
+  })
+} 
 
+searchInput.addEventListener('keyup', () => {
+  filterCards(searchInput.value);
+})
 
 
 getPackageBtn.addEventListener('click', function () {
@@ -112,7 +129,7 @@ function createGameCard(game, divContainer) {
   
   // create the inner div with class "card img-card rounded-5"
   let innerDiv = document.createElement("div");
-  innerDiv.classList.add("card", "img-card", "rounded-5");
+  innerDiv.classList.add("card", "game-card", "img-card", "rounded-5");
   
   // create the image element and set its attributes
   let img = document.createElement("img");
@@ -189,6 +206,7 @@ function createGameCard(game, divContainer) {
   let titleText = document.createElement("h6");
   // Create a strong element for the title
   let strong = document.createElement("strong");
+  strong.classList.add("title");
   strong.innerText = game.title;
   titleText.appendChild(strong);
   titleDiv.appendChild(titleText);
