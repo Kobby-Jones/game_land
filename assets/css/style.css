@@ -211,3 +211,12 @@ li .profile:hover{
     background-color: white;
     color: deeppink;
 }
+.status{
+    z-index: 1;
+    position: absolute;
+    display: none;
+}
+.bi-exclamation-circle-fill{
+    color: red;
+    font-size: 2rem;
+}

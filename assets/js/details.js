@@ -8,6 +8,7 @@ const publisher = document.querySelector(".publisher");
 const gameDescription = document.querySelector(".game-description");
 const downloadGamebtn = document.querySelector(".game-download-button");
 const playButton = document.getElementById("play-button");
+const otherRelated = document.querySelector('.other-related')
 
 
 window.onload = function () {
@@ -36,3 +37,8 @@ window.onload = function () {
         window.location.href = gamesite
     })
 };
+
+const realated_Games = games.slice(15, 21);
+realated_Games.forEach(game => (
+    libraryGames(game, otherRelated)
+))
