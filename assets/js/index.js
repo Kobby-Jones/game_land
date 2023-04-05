@@ -22,9 +22,9 @@ const downloadBtn3 = document.querySelector(".download3");
 
 const libraryContainer = document.querySelector('.library-container');
 
-// Crete the library game function
+// Create the library game function
 
-function libraryGames(game) {
+function libraryGames(game, container) {
   // Crete the main row
   let library_Row = document.createElement("div");
   library_Row.classList.add("row");
@@ -111,7 +111,7 @@ function libraryGames(game) {
   // Add button to culumn and add column to the row
   download_Column.appendChild(downloadButton);
   library_Row.appendChild(download_Column);
-  libraryContainer.appendChild(library_Row);
+  container.appendChild(library_Row);
 
   // Create a line under the column
   let lineDiv = document.createElement("div");
@@ -129,7 +129,7 @@ const games_To_put_In_Library = games.slice(10, 15);
 
 // Add each game to the library
 games_To_put_In_Library.forEach(game => {
-  libraryGames(game);
+  libraryGames(game,libraryContainer);
 })
 
 function goToGamePage(gameLibrary) {
@@ -228,3 +228,5 @@ function choosePopular() {
   });
 }
 choosePopular();
+// Make the libraryGames function globally available
+window.libraryGames = libraryGames;
